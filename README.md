@@ -15,7 +15,7 @@ This repository documents my end-to-end learning journey in Deep Learning with P
 ---
 
 ## 🔹 1. CNN From Scratch (Baseline Model)
-### 📄 File: Cnn_from_scratch.ipynb
+### 📄 File: CNN_From_Scratch.ipynb
 
 In this step, I built a custom CNN architecture to understand the fundamentals of deep learning without relying on pre-built backbones.
 
