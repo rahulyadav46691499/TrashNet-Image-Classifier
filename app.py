@@ -5,6 +5,11 @@ from torchvision.models import vgg16
 from torchvision import transforms
 from PIL import Image
 import os
+import gdown
+
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+MODEL_DIR = os.path.join(BASE_DIR, "models")
+WEIGHTS_PATH = os.path.join(MODEL_DIR, "VGG16_model.pth")
 
 # ---------------- CONFIG ----------------
 DEVICE = torch.device("cuda" if torch.cuda.is_available() else "cpu")
