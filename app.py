@@ -15,7 +15,17 @@ WEIGHTS_PATH = os.path.join(MODEL_DIR, "VGG16_model.pth")
 DEVICE = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 # classes order should be same as (train_dataset.class_to_idx)
 CLASSES = ['cardboard', 'glass', 'metal', 'paper', 'plastic', 'trash']
-WEIGHTS_PATH = "VGG16_model.pth"
+
+os.makedirs(MODEL_DIR, exist_ok=True)
+
+
+def download_model():
+    if not os.path.exists(WEIGHTS_PATH):
+        st.info("⬇️ Downloading model weights... Please wait")
+        file_id = "1XJIcSP7Mpf8AFLqBmT8rDAiJEOZ4tqXG"
+        url = f"https://drive.google.com/uc?id={file_id}"
+        gdown.download(url, WEIGHTS_PATH, quiet=False)
+        st.success("✅ Model downloaded successfully")
 
 torch.set_grad_enabled(False)
 
@@ -25,9 +35,7 @@ def load_model():
     """
     Load VGG16 model ONCE and cache it.
     """
-    if not os.path.exists(WEIGHTS_PATH):
-        st.error(f"Model weights not found: {WEIGHTS_PATH}")
-        st.stop()
+    download_model()
 
     # Load base VGG16 WITHOUT ImageNet weights
     model = vgg16(weights=None)
