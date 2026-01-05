@@ -15,7 +15,7 @@ This repository documents my end-to-end learning journey in Deep Learning with P
 ---
 
 ## 🔹 1. CNN From Scratch (Baseline Model)
-### 📄 File: cnn_from_scratch.ipynb
+### 📄 File: Cnn_from_scratch.ipynb
 
 In this step, I built a custom CNN architecture to understand the fundamentals of deep learning without relying on pre-built backbones.
 
@@ -27,9 +27,8 @@ In this step, I built a custom CNN architecture to understand the fundamentals o
 #### Key Learning Outcomes:
 * Understanding convolution, pooling, and fully connected layers.
 * Backpropagation and gradient updates.
-* Visualizing Overfitting vs. Underfitting.
 * The importance of data normalization.
-* Result: ✅ Test Accuracy: ~84%
+* Result: ✅ Test Accuracy: ~81%
 
 ## 🔹 2. Fine-Tuning a Pretrained Model (VGG16)
 ### 📄 File: vgg16_fine_tuning.py
